@@ -1,0 +1,60 @@
+# Administration des actualités — SCOOP-CA Maendeleo
+# Editor: Sveltia CMS (https://sveltiacms.app). Each saved post is a commit to GitHub;
+# Cloudflare Pages then rebuilds the site automatically (about 1 minute).
+
+backend:
+  name: github
+  repo: monsieurpapa/scoopmaendeleo
+  branch: main
+  commit_messages:
+    create: "Actualité : création de « {{slug}} »"
+    update: "Actualité : mise à jour de « {{slug}} »"
+    delete: "Actualité : suppression de « {{slug}} »"
+    uploadMedia: "Média : ajout de « {{path}} »"
+    deleteMedia: "Média : suppression de « {{path}} »"
+
+site_url: https://www.scoopmaendeleo.com
+display_url: https://www.scoopmaendeleo.com
+logo:
+  src: /img/logo-scoop-maendeleo.png
+
+media_folder: img/news
+public_folder: /img/news
+
+collections:
+  - name: news
+    label: Actualités
+    label_singular: Actualité
+    description: "Événements, activités et nouvelles de la coopérative. Le français est obligatoire, l'anglais est optionnel (sans anglais, l'article n'apparaît que sur le site français)."
+    folder: content/news
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: [date, title, category]
+    preview_path: "actualites/{{slug}}/"
+    fields:
+      - { name: title, label: "Titre (FR)", widget: string, hint: "Court et précis, 70 caractères maximum idéalement." }
+      - { name: date, label: "Date de publication", widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - name: category
+        label: Catégorie
+        widget: select
+        default: activity
+        options:
+          - { label: "Événement", value: event }
+          - { label: "Activité", value: activity }
+          - { label: "Formation", value: training }
+          - { label: "Récolte", value: harvest }
+          - { label: "Export", value: export }
+          - { label: "Partenariat", value: partnership }
+          - { label: "Communauté", value: community }
+      - { name: image, label: "Photo principale", widget: image, required: false, hint: "Photo horizontale de préférence, au format JPG ou PNG. Elle est optimisée automatiquement." }
+      - { name: image_alt, label: "Description de la photo", widget: string, required: false, hint: "Décrivez ce que montre la photo (utile pour Google et l'accessibilité)." }
+      - { name: excerpt, label: "Résumé (FR)", widget: text, required: false, hint: "1 à 2 phrases, 160 caractères maximum. Affiché dans le menu, les cartes et les résultats Google." }
+      - { name: body, label: "Article (FR)", widget: markdown }
+      - { name: title_en, label: "Title (EN, optional)", widget: string, required: false }
+      - { name: excerpt_en, label: "Summary (EN, optional)", widget: text, required: false }
+      - { name: body_en, label: "Article (EN, optional)", widget: markdown, required: false }
+      - { name: draft, label: "Brouillon (ne pas publier)", widget: boolean, default: false, required: false }

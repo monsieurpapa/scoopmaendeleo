@@ -1,0 +1,17 @@
+{
+  "name": "scoopmaendeleo-site",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Site web de la SCOOP-CA Maendeleo — café Arabica du Sud-Kivu",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "npm run build && npx --yes serve dist"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "marked": "^15.0.0",
+    "sharp": "^0.34.0"
+  }
+}
