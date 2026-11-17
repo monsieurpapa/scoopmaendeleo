@@ -23,7 +23,7 @@ body_en: |
   *Roaster or importer? [See our available lots](/en/#lots) or [request a sample](/en/#contact).*
 draft: false
 ---
-Le lot **BC 322** de la coopérative Maendeleo a été conditionné et expédié en **novembre 2026**. Ce café vert Arabica, récolte 2026, a été vendu via **Congo Agri Solution** dans le cadre du programme **Best of Congo Co-operatives**.
+Le lot **BC 322** de la Société Coopérative Agricole Maendeleo a été conditionné et expédié en **novembre 2026**. Ce café vert Arabica, récolte 2026, a été vendu via **Congo Agri Solution** dans le cadre du programme **Best of Congo Co-operatives**.
 
 Les acheteurs sont **Atlas Coffee** et **Optimist Coffee**, deux partenaires qui achetaient déjà le café de nos membres en 2025.
 

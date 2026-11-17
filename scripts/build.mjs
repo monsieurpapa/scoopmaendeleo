@@ -33,11 +33,11 @@ const CATS = {
   harvest: ["Récolte", "Harvest"], export: ["Export", "Export"], partnership: ["Partenariat", "Partnership"], community: ["Communauté", "Community"],
 };
 const T = {
-  fr: { news: "Actualités", all: "Toutes les actualités", home: "Accueil", latest: "La vie de la coopérative", lead: "Événements, récoltes, formations et expéditions : suivez les activités de la coopérative Maendeleo.",
+  fr: { news: "Actualités", all: "Toutes les actualités", home: "Accueil", latest: "La vie de la coopérative", lead: "Événements, récoltes, formations et expéditions : suivez les activités de la Société Coopérative Agricole Maendeleo.",
         read: "Lire l'article", allCats: "Toutes", min: "min de lecture", share: "Partager", copy: "Copier le lien", copied: "Lien copié ✓", more: "Autres actualités",
         frOnly: "", enOnly: "", none: "Aucune actualité pour le moment.", back: "Retour à l'accueil", notFound: "Page introuvable", notFoundT: "Cette page n'existe pas ou a été déplacée.",
         base: "/", newsBase: "/actualites/", lots: "Voir les lots" },
-  en: { news: "News", all: "All news", home: "Home", latest: "Life at the cooperative", lead: "Events, harvests, training and shipments: follow the activities of the Maendeleo cooperative.",
+  en: { news: "News", all: "All news", home: "Home", latest: "Life at the cooperative", lead: "Events, harvests, training and shipments: follow the activities of the Maendeleo Agricultural Cooperative Society.",
         read: "Read article", allCats: "All", min: "min read", share: "Share", copy: "Copy link", copied: "Link copied ✓", more: "More news",
         frOnly: "In French", enOnly: "", none: "No news yet.", back: "Back to home", notFound: "Page not found", notFoundT: "This page does not exist or has moved.",
         base: "/en/", newsBase: "/en/news/", lots: "View lots" },
@@ -222,7 +222,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</sc
 <body class="sub">
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="${b}" class="brand" aria-label="Maendeleo"><img src="/img/logo-scoop-maendeleo.png" width="46" height="46" alt="${lang === "fr" ? "Logo de la Coopérative Agricole Maendeleo" : "Maendeleo Agricultural Cooperative logo"}"><div>Maendeleo<small>SCOOP-CA · ${lang === "fr" ? "Sud-Kivu" : "South Kivu"}</small></div></a>
+    <a href="${b}" class="brand" aria-label="Maendeleo"><img src="/img/logo-scoop-maendeleo.png" width="46" height="46" alt="${lang === "fr" ? "Logo de la Société Coopérative Agricole Maendeleo" : "Maendeleo Agricultural Cooperative logo"}"><div>Maendeleo<small>SCOOP-CA · ${lang === "fr" ? "Sud-Kivu" : "South Kivu"}</small></div></a>
     <nav class="links" aria-label="${lang === "fr" ? "Navigation principale" : "Main navigation"}">
       ${links}
       ${dropdown(lang)}
