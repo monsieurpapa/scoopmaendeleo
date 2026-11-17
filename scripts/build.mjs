@@ -16,7 +16,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE = "https://www.scoopmaendeleo.com";
 const TODAY = new Date().toISOString().slice(0, 10);
-const COPY = ["index.html", "en", "img", "assets", "admin", "_headers"];
+const COPY = ["index.html", "en", "img", "assets", "admin", "docs", "_headers"];
 
 let sharp = null;
 try { sharp = (await import("sharp")).default; } catch { console.warn("sharp not available: news images will not be converted to WebP"); }
@@ -184,8 +184,8 @@ write("assets/site.css", css);
 const fontLinks = (homeFr.match(/<link rel="preconnect"[\s\S]*?display=swap" rel="stylesheet">/) || [""])[0];
 
 const NAV = {
-  fr: [["#about", "La coopérative"], ["#terroir", "Terroir"], ["#process", "Processus"], ["#products", "Produits"], ["#lots", "Lots"], ["#impact", "Impact"], ["#gallery", "Galerie"]],
-  en: [["#about", "The Cooperative"], ["#terroir", "Terroir"], ["#process", "Process"], ["#products", "Products"], ["#lots", "Lots"], ["#impact", "Impact"], ["#gallery", "Gallery"]],
+  fr: [["#about", "La coopérative"], ["#terroir", "Terroir"], ["#eudr", "EUDR"], ["#process", "Processus"], ["#products", "Produits"], ["#lots", "Lots"], ["#impact", "Impact"], ["#gallery", "Galerie"]],
+  en: [["#about", "The Cooperative"], ["#terroir", "Terroir"], ["#eudr", "EUDR"], ["#process", "Process"], ["#products", "Products"], ["#lots", "Lots"], ["#impact", "Impact"], ["#gallery", "Gallery"]],
 };
 function shell(lang, { title, description, canonical, alternates = [], ogImage, ogType = "website", jsonld = [], body, frUrl, enUrl }) {
   const t = T[lang], b = t.base;
@@ -251,7 +251,7 @@ ${body}
         <a href="${b}" class="brand"><img src="/img/logo-scoop-maendeleo.png" width="46" height="46" alt="" loading="lazy"><div>Maendeleo<small>${lang === "fr" ? "Société Coopérative Agricole" : "Agricultural Cooperative"}</small></div></a>
         <p style="margin-top:1rem;max-width:36ch">${lang === "fr" ? "Production, transformation et exportation de café Arabica de spécialité depuis le Sud-Kivu, RD Congo." : "Growing, processing and exporting specialty Arabica coffee from South Kivu, DR Congo."}</p>
       </div>
-      <div><h5>Navigation</h5><ul><li><a href="${b}#about">${NAV[lang][0][1]}</a></li><li><a href="${b}#products">${NAV[lang][3][1]}</a></li><li><a href="${b}#lots">Lots</a></li><li><a href="${t.newsBase}">${t.news}</a></li><li><a href="${b}#faq">FAQ</a></li><li><a href="${b}#contact">Contact</a></li></ul></div>
+      <div><h5>Navigation</h5><ul><li><a href="${b}#about">${NAV[lang][0][1]}</a></li><li><a href="${b}#products">${NAV[lang][4][1]}</a></li><li><a href="${b}#lots">Lots</a></li><li><a href="${t.newsBase}">${t.news}</a></li><li><a href="${b}#faq">FAQ</a></li><li><a href="${b}#contact">Contact</a></li></ul></div>
       <div><h5>${lang === "fr" ? "Informations légales" : "Legal information"}</h5><ul><li>SCOOP-CA Maendeleo</li><li>Id. Nat. 19-H5300-N23413Z</li><li>RCCM CD/GOM/RCCM/23-B00082</li><li>NIF A2306573W</li></ul></div>
     </div>
     <div class="legal"><span>© <span id="yr">${new Date().getFullYear()}</span> SCOOP-CA Maendeleo · Katana, ${lang === "fr" ? "Sud-Kivu" : "South Kivu"}</span><span style="font-family:var(--serif);font-style:italic">${lang === "fr" ? "« Uni pour un Café Compétitif »" : "“United for a Competitive Coffee”"}</span></div>
