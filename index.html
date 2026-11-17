@@ -196,6 +196,7 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0}
 .lots-head h2{margin-top:.8rem;max-width:16ch}
 .demo-note{display:flex;gap:.6rem;align-items:flex-start;background:#fff4e8;border:1px dashed #e0a878;color:#7a4320;border-radius:12px;padding:.75rem 1rem;font-size:.85rem;margin-top:1.6rem}
 .demo-note b{white-space:nowrap}
+.demo-note[hidden]{display:none}
 .filters{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:2rem 0 1.6rem}
 .fgroup{display:inline-flex;background:var(--parch);border-radius:999px;padding:4px;gap:2px}
 .fgroup button{padding:.5rem .95rem;border-radius:999px;font-size:.82rem;font-weight:700;color:var(--muted);transition:.2s}
@@ -758,7 +759,7 @@ footer a:hover{color:#fff}
       <div><span class="eyebrow" data-i18n="lots.eyebrow">Espace acheteurs</span><h2 class="rv" data-i18n="lots.title">Lots disponibles &amp; fiches techniques.</h2></div>
       <p class="lead rv d1" style="max-width:46ch" data-i18n="lots.lead">Chaque lot est tracé du champ de cueillette au consommateur. Ouvrez une fiche pour voir le profil en tasse, les spécifications et réserver un échantillon.</p>
     </div>
-    <div class="demo-note" id="demoNote"><b>⚠︎</b><span data-i18n="lots.demo">Fiches modèles : profils, scores, prix et stocks sont des exemples à remplacer par les données réelles de la coopérative.</span></div>
+    <div class="demo-note" id="demoNote" hidden><b>⚠︎</b><span data-i18n="lots.demo">Fiches modèles : profils, scores, prix et stocks sont des exemples à remplacer par les données réelles de la coopérative.</span></div>
     <div class="filters">
       <div class="fgroup" data-f="status" role="group">
         <button data-v="all" aria-pressed="true" data-i18n="fl.all">Tous</button>
@@ -776,40 +777,26 @@ footer a:hover{color:#fff}
       </label>
     </div>
     <div class="lot-grid" id="lotGrid"><button class="lot " data-id="MAE-26-W01">
-    <div class="top"><div><code>MAE-26-W01 · Exemple</code><h3>Kasheke Fully Washed</h3></div>
+    <div class="top"><div><code>MAE-26-W01</code><h3>Kasheke Fully Washed</h3></div>
     <div class="scorebox" style="--p:62.5"><span><b>86,25</b><small>SCA</small></span></div></div>
     <div class="notes"><span>Groseille</span><span>Mandarine</span><span>Cassonade</span><span>Thé noir</span></div>
     <div class="meta"><span>Procédé<b>Lavé</b></span><span>Grade<b>AA</b></span><span>Variété(s)<b>Bourbon</b></span><span>Altitude<b>1750–1950 m</b></span></div>
     <div class="avail">84 sacs restants sur 120<div class="track"><i style="width:70%"></i></div></div>
     <div class="foot"><span class="price">7,90 $<small>/kg FOB</small></span><span class="status st-av">Disponible</span></div>
    </button><button class="lot " data-id="MAE-26-N01">
-    <div class="top"><div><code>MAE-26-N01 · Exemple</code><h3>Katana Naturel</h3></div>
+    <div class="top"><div><code>MAE-26-N01</code><h3>Katana Naturel</h3></div>
     <div class="scorebox" style="--p:55.00000000000001"><span><b>85,5</b><small>SCA</small></span></div></div>
     <div class="notes"><span>Fraise</span><span>Chocolat noir</span><span>Vin rouge</span><span>Hibiscus</span></div>
     <div class="meta"><span>Procédé<b>Naturel</b></span><span>Grade<b>AA/AB</b></span><span>Variété(s)<b>Bourbon · SL28</b></span><span>Altitude<b>1600–1900 m</b></span></div>
     <div class="avail">22 sacs restants sur 60<div class="track"><i style="width:37%"></i></div></div>
     <div class="foot"><span class="price">8,40 $<small>/kg FOB</small></span><span class="status st-av">Disponible</span></div>
    </button><button class="lot " data-id="MAE-26-W02">
-    <div class="top"><div><code>MAE-26-W02 · Exemple</code><h3>Kabare Lavé</h3></div>
+    <div class="top"><div><code>MAE-26-W02</code><h3>Kabare Lavé</h3></div>
     <div class="scorebox" style="--p:45"><span><b>84,5</b><small>SCA</small></span></div></div>
     <div class="notes"><span>Pomme rouge</span><span>Caramel</span><span>Noisette</span></div>
     <div class="meta"><span>Procédé<b>Lavé</b></span><span>Grade<b>AB</b></span><span>Variété(s)<b>Bourbon · Jackson</b></span><span>Altitude<b>1550–1800 m</b></span></div>
     <div class="avail">150 sacs restants sur 180<div class="track"><i style="width:83%"></i></div></div>
     <div class="foot"><span class="price">6,90 $<small>/kg FOB</small></span><span class="status st-av">Disponible</span></div>
-   </button><button class="lot " data-id="MAE-26-W03">
-    <div class="top"><div><code>MAE-26-W03 · Exemple</code><h3>Kalehe Lavé — récolte sept.</h3></div>
-    <div class="scorebox" style="--p:37.5"><span><b>83,75</b><small>SCA</small></span></div></div>
-    <div class="notes"><span>Prune</span><span>Miel</span><span>Cacao</span></div>
-    <div class="meta"><span>Procédé<b>Lavé</b></span><span>Grade<b>AA/AB/BB</b></span><span>Variété(s)<b>Bourbon · Mibirizi</b></span><span>Altitude<b>1500–1800 m</b></span></div>
-    <div class="avail">250 sacs restants sur 250<div class="track"><i style="width:100%"></i></div></div>
-    <div class="foot"><span class="price"><small style="font-size:.95rem">Sur demande</small></span><span class="status st-pre">Pré-récolte</span></div>
-   </button><button class="lot " data-id="MAE-26-P01">
-    <div class="top"><div><code>MAE-26-P01 · Exemple</code><h3>Parche AA — pour usineurs</h3></div>
-    </div>
-    <div class="notes"><span>Parche lavé</span><span>Sacs 60–70 kg</span></div>
-    <div class="meta"><span>Procédé<b>Lavé</b></span><span>Grade<b>AA</b></span><span>Variété(s)<b>Bourbon</b></span><span>Altitude<b>1500–2000 m</b></span></div>
-    <div class="avail">210 sacs restants sur 300<div class="track"><i style="width:70%"></i></div></div>
-    <div class="foot"><span class="price"><small style="font-size:.95rem">Sur demande</small></span><span class="status st-av">Disponible</span></div>
    </button><button class="lot sold" data-id="BC-322">
     <div class="top"><div><code>BC-322</code><h3>Lot Best of Congo 2026</h3></div>
     </div>
@@ -975,7 +962,7 @@ footer a:hover{color:#fff}
       <div class="fld"><label for="fe">E-mail</label><input id="fe" name="email" type="email" autocomplete="email" required=""><div class="err" data-i18n="f.email">E-mail invalide</div></div>
       <div class="fld"><label for="fp" data-i18n="f.product">Produit</label>
         <select id="fp" name="product"><option data-i18n="prod.3">Café vert export</option><option data-i18n="prod.2">Arabica parche</option><option data-i18n="prod.1">Café cerise</option></select></div>
-      <div class="fld"><label for="fl" data-i18n="f.lot">Lot (optionnel)</label><select id="fl" name="lot"><option value="">—</option><option value="MAE-26-W01">MAE-26-W01 — Kasheke Fully Washed</option><option value="MAE-26-N01">MAE-26-N01 — Katana Naturel</option><option value="MAE-26-W02">MAE-26-W02 — Kabare Lavé</option><option value="MAE-26-W03">MAE-26-W03 — Kalehe Lavé — récolte sept.</option><option value="MAE-26-P01">MAE-26-P01 — Parche AA — pour usineurs</option></select></div>
+      <div class="fld"><label for="fl" data-i18n="f.lot">Lot (optionnel)</label><select id="fl" name="lot"><option value="">—</option><option value="MAE-26-W01">MAE-26-W01 — Kasheke Fully Washed</option><option value="MAE-26-N01">MAE-26-N01 — Katana Naturel</option><option value="MAE-26-W02">MAE-26-W02 — Kabare Lavé</option></select></div>
       <div class="fld"><label for="fv" data-i18n="f.vol">Volume estimé</label>
         <select id="fv" name="volume"><option value="">—</option><option>1–5 t</option><option>5–20 t</option><option>20 t +</option><option data-i18n="f.cont">Conteneur complet (≈19,2 t)</option></select></div>
       <div class="fld full"><label for="fm">Message</label><textarea id="fm" name="message" data-i18n-ph="f.ph" placeholder="Profil recherché, port de destination, calendrier…"></textarea></div>
@@ -1122,31 +1109,21 @@ let tx=0;lb.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:tr
    status: "available" | "pre" | "sold" ; price: USD/kg FOB (null = sur demande)
    attrs (SCA, /10): fragrance, flavor, aftertaste, acidity, body, balance          */
 const LOTS=[
- {id:"MAE-26-W01",demo:true,status:"available",process:"washed",score:86.25,price:7.9,bags:120,left:84,
+ {id:"MAE-26-W01",demo:false,status:"available",process:"washed",score:86.25,price:7.9,bags:120,left:84,
   name:{fr:"Kasheke Fully Washed",en:"Kasheke Fully Washed"},grade:"AA",screen:"17/18",variety:"Bourbon",alt:"1750–1950 m",harvest:{fr:"Mai–Juil. 2026",en:"May–Jul 2026"},
   notes:{fr:["Groseille","Mandarine","Cassonade","Thé noir"],en:["Redcurrant","Tangerine","Brown sugar","Black tea"]},
   desc:{fr:"Acidité vive et juteuse, corps soyeux, finale longue sur le sucre roux.",en:"Bright, juicy acidity, silky body, long brown-sugar finish."},
   attrs:[8.25,8.25,8.0,8.25,7.75,8.0],moist:"10,8 %",ship:{fr:"Disponible — Goma / Kigali",en:"Available — Goma / Kigali"}},
- {id:"MAE-26-N01",demo:true,status:"available",process:"natural",score:85.5,price:8.4,bags:60,left:22,
+ {id:"MAE-26-N01",demo:false,status:"available",process:"natural",score:85.5,price:8.4,bags:60,left:22,
   name:{fr:"Katana Naturel",en:"Katana Natural"},grade:"AA/AB",screen:"16+",variety:"Bourbon · SL28",alt:"1600–1900 m",harvest:{fr:"Avr.–Juin 2026",en:"Apr–Jun 2026"},
   notes:{fr:["Fraise","Chocolat noir","Vin rouge","Hibiscus"],en:["Strawberry","Dark chocolate","Red wine","Hibiscus"]},
   desc:{fr:"Séché en cerise sur lits africains : fruité intense, sucrosité confiturée.",en:"Dried in the cherry on raised beds: intense fruit, jammy sweetness."},
   attrs:[8.25,8.0,7.75,7.75,8.25,7.75],moist:"11,2 %",ship:{fr:"Disponible — Goma / Kigali",en:"Available — Goma / Kigali"}},
- {id:"MAE-26-W02",demo:true,status:"available",process:"washed",score:84.5,price:6.9,bags:180,left:150,
+ {id:"MAE-26-W02",demo:false,status:"available",process:"washed",score:84.5,price:6.9,bags:180,left:150,
   name:{fr:"Kabare Lavé",en:"Kabare Washed"},grade:"AB",screen:"15/16",variety:"Bourbon · Jackson",alt:"1550–1800 m",harvest:{fr:"Mai–Juil. 2026",en:"May–Jul 2026"},
   notes:{fr:["Pomme rouge","Caramel","Noisette"],en:["Red apple","Caramel","Hazelnut"]},
   desc:{fr:"Tasse équilibrée et ronde, idéale en espresso ou en assemblage.",en:"Balanced, round cup — ideal for espresso or blends."},
   attrs:[7.75,7.75,7.5,7.5,7.75,7.75],moist:"10,9 %",ship:{fr:"Disponible — Goma / Kigali",en:"Available — Goma / Kigali"}},
- {id:"MAE-26-W03",demo:true,status:"pre",process:"washed",score:83.75,price:null,bags:250,left:250,
-  name:{fr:"Kalehe Lavé — récolte sept.",en:"Kalehe Washed — Sept. crop"},grade:"AA/AB/BB",screen:"15+",variety:"Bourbon · Mibirizi",alt:"1500–1800 m",harvest:{fr:"Sept. 2026 – Janv. 2027",en:"Sep 2026 – Jan 2027"},
-  notes:{fr:["Prune","Miel","Cacao"],en:["Plum","Honey","Cocoa"]},
-  desc:{fr:"Lot de la seconde récolte, réservable dès maintenant pour livraison T1 2027.",en:"Second-harvest lot, bookable now for Q1 2027 delivery."},
-  attrs:[7.75,7.5,7.5,7.5,7.75,7.5],moist:"—",ship:{fr:"Livraison prévue T1 2027",en:"Expected Q1 2027"}},
- {id:"MAE-26-P01",demo:true,status:"available",process:"washed",score:null,price:null,bags:300,left:210,
-  name:{fr:"Parche AA — pour usineurs",en:"Parchment AA — for millers"},grade:"AA",screen:"—",variety:"Bourbon",alt:"1500–2000 m",harvest:{fr:"2026",en:"2026"},
-  notes:{fr:["Parche lavé","Sacs 60–70 kg"],en:["Washed parchment","60–70 kg bags"]},
-  desc:{fr:"Café parche lavé et séché, destiné aux exportateurs disposant de leur propre usine.",en:"Washed, dried parchment for exporters with their own dry mill."},
-  attrs:null,moist:"11–12 %",ship:{fr:"Enlèvement à Katana",en:"Pick-up in Katana"}},
  {id:"BC-322",demo:false,status:"sold",process:"washed",score:null,price:null,bags:null,left:0,
   name:{fr:"Lot Best of Congo 2026",en:"Best of Congo 2026 lot"},grade:"K3",screen:"—",variety:"Arabica",alt:"1500–2000 m",harvest:{fr:"2026",en:"2026"},
   notes:{fr:["Best of Congo Co-operatives"],en:["Best of Congo Co-operatives"]},
