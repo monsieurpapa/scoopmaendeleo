@@ -776,7 +776,7 @@ footer a:hover{color:#fff}
       </label>
     </div>
     <div class="lot-grid" id="lotGrid"><button class="lot " data-id="MAE-26-W01">
-    <div class="top"><div><code>MAE-26-W01 · Example</code><h3>Kasheke Washed AA</h3></div>
+    <div class="top"><div><code>MAE-26-W01 · Example</code><h3>Kasheke Fully Washed</h3></div>
     <div class="scorebox" style="--p:62.5"><span><b>86.25</b><small>SCA</small></span></div></div>
     <div class="notes"><span>Redcurrant</span><span>Tangerine</span><span>Brown sugar</span><span>Black tea</span></div>
     <div class="meta"><span>Process<b>Washed</b></span><span>Grade<b>AA</b></span><span>Variety<b>Bourbon</b></span><span>Altitude<b>1750–1950 m</b></span></div>
@@ -790,7 +790,7 @@ footer a:hover{color:#fff}
     <div class="avail">22 bags left of 60<div class="track"><i style="width:37%"></i></div></div>
     <div class="foot"><span class="price">8.40 $<small>/kg FOB</small></span><span class="status st-av">Available</span></div>
    </button><button class="lot " data-id="MAE-26-W02">
-    <div class="top"><div><code>MAE-26-W02 · Example</code><h3>Kabare Washed AB</h3></div>
+    <div class="top"><div><code>MAE-26-W02 · Example</code><h3>Kabare Washed</h3></div>
     <div class="scorebox" style="--p:45"><span><b>84.5</b><small>SCA</small></span></div></div>
     <div class="notes"><span>Red apple</span><span>Caramel</span><span>Hazelnut</span></div>
     <div class="meta"><span>Process<b>Washed</b></span><span>Grade<b>AB</b></span><span>Variety<b>Bourbon · Jackson</b></span><span>Altitude<b>1550–1800 m</b></span></div>
@@ -975,7 +975,7 @@ footer a:hover{color:#fff}
       <div class="fld"><label for="fe">E-mail</label><input id="fe" name="email" type="email" autocomplete="email" required=""><div class="err" data-i18n="f.email">Invalid email</div></div>
       <div class="fld"><label for="fp" data-i18n="f.product">Product</label>
         <select id="fp" name="product"><option data-i18n="prod.3">Green coffee for export</option><option data-i18n="prod.2">Arabica parchment</option><option data-i18n="prod.1">Coffee cherry</option></select></div>
-      <div class="fld"><label for="fl" data-i18n="f.lot">Lot (optional)</label><select id="fl" name="lot"><option value="">—</option><option value="MAE-26-W01">MAE-26-W01 — Kasheke Washed AA</option><option value="MAE-26-N01">MAE-26-N01 — Katana Natural</option><option value="MAE-26-W02">MAE-26-W02 — Kabare Washed AB</option><option value="MAE-26-W03">MAE-26-W03 — Kalehe Washed — Sept. crop</option><option value="MAE-26-P01">MAE-26-P01 — Parchment AA — for millers</option></select></div>
+      <div class="fld"><label for="fl" data-i18n="f.lot">Lot (optional)</label><select id="fl" name="lot"><option value="">—</option><option value="MAE-26-W01">MAE-26-W01 — Kasheke Fully Washed</option><option value="MAE-26-N01">MAE-26-N01 — Katana Natural</option><option value="MAE-26-W02">MAE-26-W02 — Kabare Washed</option><option value="MAE-26-W03">MAE-26-W03 — Kalehe Washed — Sept. crop</option><option value="MAE-26-P01">MAE-26-P01 — Parchment AA — for millers</option></select></div>
       <div class="fld"><label for="fv" data-i18n="f.vol">Estimated volume</label>
         <select id="fv" name="volume"><option value="">—</option><option>1–5 t</option><option>5–20 t</option><option>20 t +</option><option data-i18n="f.cont">Full container (≈19.2 t)</option></select></div>
       <div class="fld full"><label for="fm">Message</label><textarea id="fm" name="message" data-i18n-ph="f.ph" placeholder="Desired profile, destination port, timeline…"></textarea></div>
@@ -1123,7 +1123,7 @@ let tx=0;lb.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:tr
    attrs (SCA, /10): fragrance, flavor, aftertaste, acidity, body, balance          */
 const LOTS=[
  {id:"MAE-26-W01",demo:true,status:"available",process:"washed",score:86.25,price:7.9,bags:120,left:84,
-  name:{fr:"Kasheke Lavé AA",en:"Kasheke Washed AA"},grade:"AA",screen:"17/18",variety:"Bourbon",alt:"1750–1950 m",harvest:{fr:"Mai–Juil. 2026",en:"May–Jul 2026"},
+  name:{fr:"Kasheke Fully Washed",en:"Kasheke Fully Washed"},grade:"AA",screen:"17/18",variety:"Bourbon",alt:"1750–1950 m",harvest:{fr:"Mai–Juil. 2026",en:"May–Jul 2026"},
   notes:{fr:["Groseille","Mandarine","Cassonade","Thé noir"],en:["Redcurrant","Tangerine","Brown sugar","Black tea"]},
   desc:{fr:"Acidité vive et juteuse, corps soyeux, finale longue sur le sucre roux.",en:"Bright, juicy acidity, silky body, long brown-sugar finish."},
   attrs:[8.25,8.25,8.0,8.25,7.75,8.0],moist:"10,8 %",ship:{fr:"Disponible — Goma / Kigali",en:"Available — Goma / Kigali"}},
@@ -1133,7 +1133,7 @@ const LOTS=[
   desc:{fr:"Séché en cerise sur lits africains : fruité intense, sucrosité confiturée.",en:"Dried in the cherry on raised beds: intense fruit, jammy sweetness."},
   attrs:[8.25,8.0,7.75,7.75,8.25,7.75],moist:"11,2 %",ship:{fr:"Disponible — Goma / Kigali",en:"Available — Goma / Kigali"}},
  {id:"MAE-26-W02",demo:true,status:"available",process:"washed",score:84.5,price:6.9,bags:180,left:150,
-  name:{fr:"Kabare Lavé AB",en:"Kabare Washed AB"},grade:"AB",screen:"15/16",variety:"Bourbon · Jackson",alt:"1550–1800 m",harvest:{fr:"Mai–Juil. 2026",en:"May–Jul 2026"},
+  name:{fr:"Kabare Lavé",en:"Kabare Washed"},grade:"AB",screen:"15/16",variety:"Bourbon · Jackson",alt:"1550–1800 m",harvest:{fr:"Mai–Juil. 2026",en:"May–Jul 2026"},
   notes:{fr:["Pomme rouge","Caramel","Noisette"],en:["Red apple","Caramel","Hazelnut"]},
   desc:{fr:"Tasse équilibrée et ronde, idéale en espresso ou en assemblage.",en:"Balanced, round cup — ideal for espresso or blends."},
   attrs:[7.75,7.75,7.5,7.5,7.75,7.75],moist:"10,9 %",ship:{fr:"Disponible — Goma / Kigali",en:"Available — Goma / Kigali"}},
